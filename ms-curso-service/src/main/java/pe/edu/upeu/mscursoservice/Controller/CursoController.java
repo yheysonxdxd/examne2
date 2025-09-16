@@ -20,6 +20,7 @@ public class CursoController {
 
     @GetMapping("/{id}")
     public Curso buscarPorId(@PathVariable Integer id) {
+
         return cursoService.buscarPorId(id).get();
     }
 
@@ -29,7 +30,7 @@ public class CursoController {
     }
 
     @PutMapping
-    public Curso actualizar(Curso curso) {
+    public Curso actualizar(@RequestBody Curso curso) {
         return cursoService.actualizar(curso);
     }
 
